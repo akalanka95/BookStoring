@@ -1,0 +1,48 @@
+<!--<div class="jumbotron">
+  <h1>Bootstrap Tutorial</h1>
+  <p>Bootstrap is the most popular HTML, CSS...</p>
+</div>
+
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>-->
+
+<mat-card class="example-card" [hidden]="isloggedIn">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" (ngSubmit)="onSubmit()">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" [(ngModel)] = "credential.username" name="username" id="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td><mat-form-field class="example-full-width">
+            <input matInput placeholder="Password"
+                   type="password"
+                   [(ngModel)] = "credential.password"
+                   id="password"
+                   name="password" required>
+          </mat-form-field></td>
+        </tr></table>
+      <mat-card-actions>
+        <button mat-raised-button  color="primary" type="submit">Login</button>
+      </mat-card-actions>
+    </form>
+    <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>-->
+  </mat-card-content>
+
+</mat-card>
+
+<div [hidden]="!isloggedIn">
+  <h2>You have logged in!</h2>
+</div>
+
+<!--<div class="progress">
+  <div class="progress-bar" style="width:70%">70%</div>
+</div> -->
+
