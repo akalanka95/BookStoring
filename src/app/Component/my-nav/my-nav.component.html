@@ -3,7 +3,7 @@
   <span class="example-fill-remaining-space"></span>
   <span [hidden]="!loggedIn"><button mat-button >View Book List</button></span>
   <span [hidden]="!loggedIn"><button mat-button >Add Book</button></span>
-  <span [hidden]="!loggedIn" ><button mat-button>LogOut</button></span>
+  <span [hidden]="!loggedIn" (click)="logout()" ><button mat-button>LogOut</button></span>
 
 </mat-toolbar>
 
