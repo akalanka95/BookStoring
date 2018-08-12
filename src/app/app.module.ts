@@ -12,12 +12,15 @@ import { LoginComponent } from './Component/login/login.component';
 import {AppRoutingModule} from './app.routing.module';
 import {MaterialModule} from './material';
 import {FormsModule} from '@angular/forms';
+import {AddBookComponent} from './Component/add-book/add-book.component';
+import {AddBookService} from './service/add-book.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     MyNavComponent,
-    LoginComponent
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import {FormsModule} from '@angular/forms';
     MaterialModule,
     FormsModule
   ],
-  providers: [LoginService],
+  providers: [LoginService , AddBookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
