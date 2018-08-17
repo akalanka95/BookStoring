@@ -2,6 +2,8 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {LoginComponent} from './Component/login/login.component';
 import {AddBookComponent} from './Component/add-book/add-book.component';
+import {BookListComponent} from './Component/book-list/book-list.component';
+import {ViewBookComponent} from './Component/view-book/view-book.component';
 
 
 const appRoutes: Routes = [
@@ -17,6 +19,14 @@ const appRoutes: Routes = [
   {
     path: 'addNewBook',
     component: AddBookComponent
+  },
+  {
+    path: 'bookList',
+    component: BookListComponent
+  },
+  {
+    path: 'viewBook/:id',
+    component: ViewBookComponent
   }
 ];
 

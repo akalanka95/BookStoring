@@ -9,18 +9,23 @@ import { LayoutModule } from '@angular/cdk/layout';
 import {LoginService} from './service/login.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './Component/login/login.component';
-import {AppRoutingModule} from './app.routing.module';
+import {AppRoutingModule} from './app.routing';
 import {MaterialModule} from './material';
 import {FormsModule} from '@angular/forms';
 import {AddBookComponent} from './Component/add-book/add-book.component';
 import {AddBookService} from './service/add-book.service';
+import {UploadService} from './service/upload.service';
+import { BookListComponent } from './Component/book-list/book-list.component';
+import { ViewBookComponent } from './Component/view-book/view-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MyNavComponent,
-    AddBookComponent
+    AddBookComponent,
+    BookListComponent,
+    ViewBookComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import {AddBookService} from './service/add-book.service';
     MaterialModule,
     FormsModule
   ],
-  providers: [LoginService , AddBookService],
+  providers: [LoginService , AddBookService , UploadService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

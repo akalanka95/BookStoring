@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LoginService} from '../../service/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-my-nav',
@@ -9,7 +10,7 @@ import {LoginService} from '../../service/login.service';
 export class MyNavComponent implements OnInit {
 
   loggedIn = false;
- constructor(private loginService: LoginService) {}
+ constructor(private loginService: LoginService , private router: Router) {}
  ngOnInit() {
    this.loginService.checkSession().subscribe(
      res => {
@@ -34,6 +35,7 @@ export class MyNavComponent implements OnInit {
         console.log(error);
       }
     );
+   this.router.navigate(['/']);
   }
 
  }
